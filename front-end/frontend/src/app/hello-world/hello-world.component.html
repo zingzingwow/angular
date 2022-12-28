@@ -1,0 +1,12 @@
+<!--<input (click)="createNumber()" placeholder="Hay nhap so">-->
+
+<h1>Sample calculator</h1>
+<div class="d-flex flex-column w-25">
+  <input class="form-control" type="number" [(ngModel)]="numberOne" placeholder="Enter first number">
+  <input class="form-control" type="number" [(ngModel)]="numberTwo" placeholder="Enter second number">
+
+  <button class="btn btn-success" (click)="alertSum('V1')">Sum as request params but with ? & =</button>
+  <button class="btn btn-success" (click)="alertSum('V2')">Sum as path variable</button>
+  <button class="btn btn-success" (click)="alertSum('V3')">Sum as request params via HttpParams</button>
+  <button class="btn btn-success" (click)="alertSum('V4')">Sum as post with body</button>
+</div>

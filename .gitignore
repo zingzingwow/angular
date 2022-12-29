@@ -1,0 +1,10 @@
+front-end/.idea
+front-end/frontend/.angular
+front-end/frontend/.vscode
+front-end/frontend/node_modules
+back-end/.idea
+back-end/.mvn
+back-end/src/test
+back-end/target
+
+

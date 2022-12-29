@@ -14,12 +14,14 @@ export class HelloWorldService {
 
   //as request params but with ? & =
   getSumV1(numberOne: number, numberTwo: number): Observable<HttpResponse<number>> {
+
     return this.http
       .get<number>(`${this.baseUrl}/get-sum-v1?numberOne=${numberOne}&numberTwo=${numberTwo}`, {observe: 'response'})
   }
 
   //as path variable
   getSumV2(numberOne: number, numberTwo: number): Observable<HttpResponse<number>> {
+
     return this.http
       .get<number>(`${this.baseUrl}/get-sum-v2/${numberOne}/${numberTwo}`, {observe: 'response'})
   }
@@ -27,10 +29,7 @@ export class HelloWorldService {
   // as request params
   getSumV3(numberPair : any): Observable<number> {
 
-    const params = new HttpParams();
-    params.append('numberOne', numberPair.numberOne);
-    params.append('numberTwo', numberPair.numberTwo);
-    return this.http.get<number>(`${this.baseUrl}/get-sum-v3`, {params : numberPair})
+    return this.http.get<number>(`${this.baseUrl}/get-sum-v3`, {params: numberPair})
   }
 
   // as post with body

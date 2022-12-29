@@ -50,7 +50,7 @@ export class HelloWorldComponent implements OnInit {
       case('V1') : {
         this.calculatorService.getSumV1(numberOne, numberTwo).subscribe({
           next: value => alert(value.body!),
-          error: value => alert(value.error())
+          error: value => alert('Some error occurred, please try again')
         });
         break;
       }
@@ -58,7 +58,7 @@ export class HelloWorldComponent implements OnInit {
       case('V2') : {
         this.calculatorService.getSumV2(numberOne, numberTwo).subscribe({
           next: value => alert(value.body!),
-          error: value => alert(value.error())
+          error: value => alert('Some error occurred, please try again')
         });
         break;
       }
@@ -69,7 +69,7 @@ export class HelloWorldComponent implements OnInit {
           numberTwo :numberTwo
         }).subscribe({
           next: value => alert(value),
-          error: value => alert(value.error())
+          error: value => alert('Some error occurred, please try again')
         });
         break;
       }
@@ -81,7 +81,7 @@ export class HelloWorldComponent implements OnInit {
           numberTwo: numberTwo
         }).subscribe({
           next: value => alert(value.body!),
-          error: value => alert(value.error())
+          error: value => alert('Some error occurred, please try again')
         });
         break;
       }
